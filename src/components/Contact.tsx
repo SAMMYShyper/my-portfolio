@@ -9,9 +9,9 @@ export default function Contact() {
         </div>
 
         <div className="contact-links">
-          <a href="mailto:samuelgonzalez@usf.edu">
+          <a href="mailto:sgonzalez307@gatech.edu">
             <span>Email</span>
-            <strong>samuelgonzalez@usf.edu</strong>
+            <strong>sgonzalez307@gatech.edu</strong>
           </a>
           <a href="https://github.com/SammysHyper" target="_blank" rel="noopener noreferrer">
             <span>GitHub</span>
@@ -19,7 +19,7 @@ export default function Contact() {
           </a>
           <a href="https://linkedin.com/in/samuelgonzalezusf/" target="_blank" rel="noopener noreferrer">
             <span>LinkedIn</span>
-            <strong>samuelgonzalezusf</strong>
+            <strong>samuelgonzalezgatech</strong>
           </a>
         </div>
       </div>

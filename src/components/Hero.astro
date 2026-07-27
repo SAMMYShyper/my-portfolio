@@ -4,10 +4,8 @@
 
 <section id="hero">
 	<div class="hero-content">
-		<p class="eyebrow">Portfolio</p>
 		<h1>Samuel Gonzalez</h1>
-		<p class="title">Computer Science Undergraduate</p>
-		<p class="description">University of South Florida</p>
+		<p class="description">Georgia Tech, Computer Science</p>
 	</div>
 </section>
 
@@ -20,8 +18,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		background: #0a0a0a;
-		color: white;
+		background: #102720;
+		color: var(--ink);
 		text-align: left;
 		padding: 6rem max(1.5rem, calc((100vw - 1080px) / 2));
 		position: relative;
@@ -34,7 +32,7 @@
 		inset: auto -10vw -24vh auto;
 		width: 58vw;
 		height: 58vw;
-		background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 62%);
+		background: radial-gradient(circle, rgba(120, 175, 148, 0.18), transparent 62%);
 		pointer-events: none;
 	}
 
@@ -44,33 +42,17 @@
 		z-index: 1;
 	}
 
-	.eyebrow {
-		color: rgba(255, 255, 255, 0.62);
-		font-size: 0.8rem;
-		font-weight: 700;
-		letter-spacing: 0.16em;
-		margin-bottom: 1.25rem;
-		text-transform: uppercase;
-	}
-
 	#hero h1 {
 		font-size: clamp(2.5rem, 5vw, 4.5rem);
 		line-height: 1;
 		margin-bottom: 1.25rem;
-		color: white;
-	}
-
-	.title {
-		font-size: clamp(1.15rem, 2.3vw, 1.55rem);
-		margin-bottom: 0.35rem;
-		color: rgba(255, 255, 255, 0.88);
-		font-weight: 600;
+		color: var(--ink);
 	}
 
 	.description {
 		font-size: 1rem;
 		margin-bottom: 2.5rem;
-		color: rgba(255, 255, 255, 0.62);
+		color: var(--text-light);
 	}
 
 	@media (max-width: 768px) {

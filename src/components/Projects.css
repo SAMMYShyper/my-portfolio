@@ -18,7 +18,7 @@
 .filter-buttons button {
   padding: 0.45rem 0.8rem;
   border: 1px solid var(--border);
-  background: white;
+  background: transparent;
   color: var(--text-light);
   border-radius: 6px;
   cursor: pointer;
@@ -34,9 +34,9 @@
 }
 
 .filter-buttons button.active {
-  background: var(--ink);
-  color: grey;
-  border-color: var(--ink);
+  background: #86c7a3;
+  color: #102720;
+  border-color: #86c7a3;
 }
 
 .projects-grid {
@@ -46,7 +46,7 @@
 }
 
 .project-card {
-  background: white;
+  background: var(--surface);
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--border);
@@ -81,8 +81,8 @@
 }
 
 .tech-tag {
-  background: var(--bg-secondary);
-  color: #444444;
+  background: #142b26;
+  color: #b7c9c0;
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
   font-size: 0.875rem;
