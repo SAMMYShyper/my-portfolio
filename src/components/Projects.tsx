@@ -13,7 +13,7 @@ interface Project {
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "Titanic Machine Learning from Disaster (Kaggle)",
+    title: "Titanic Machine Learning from Disaster",
     description: "Predicted Titanic passenger survival. Applied data cleaning, feature engineering, and analysis to the Titanic dataset. Built machine learning models using Python and scikit-learn. Enhanced predictive performance through model selection and hyperparameter tuning.",
     technologies: ["Python", "Pandas", "scikit-learn", "NumPy", "Matplotlib", "Seaborn", "Machine Learning", "Data Analysis"],
     githubUrl: "https://github.com/SammysHyper/titanic_machine_learning",

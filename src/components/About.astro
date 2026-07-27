@@ -4,10 +4,11 @@
 
 <section id="about">
 	<div class="about-content">
-		<h2>Hey There...</h2>
+		<h1>Samuel Gonzalez</h1>
+		<p class="identity">B.S. Computer Science · Georgia Tech</p>
 		<p class="intro">
-			I'm Sam. Whether it's gaming or climbing boulders with friends, I find the most joy in competitive, high-pressure problem-solving.
-			<br><br>I center my work around professionalism, collaboration, and enterprise satisfaction.
+			I enjoy competitive, high-pressure problem-solving, whether that means building software or competitive PC gaming.
+			I center my work around professionalism, collaboration, and enterprise satisfaction.
 		</p>
 	</div>
 </section>
@@ -15,42 +16,33 @@
 <style>
 	#about {
 		background: transparent;
+		padding-top: clamp(4.5rem, 10vw, 8rem);
+		padding-bottom: clamp(4.5rem, 9vw, 7rem);
 	}
 
 	.about-content {
 		max-width: 780px;
 	}
 
-	#about h2 {
-		margin-bottom: 1.5rem;
+	#about h1 {
+		font-size: clamp(2rem, 4vw, 3.15rem);
+		font-weight: 650;
+		letter-spacing: -0.035em;
+		margin-bottom: 0.75rem;
+	}
+
+	.identity {
+		color: #b9d6c5;
+		font-size: 1rem;
+		font-weight: 600;
+		margin-bottom: 1.25rem;
 	}
 
 	.intro {
 		font-size: 1.05rem;
 		line-height: 1.7;
 		color: var(--text-light);
-		margin-bottom: 2rem;
+		margin-bottom: 0;
 	}
 
-	.coursework,
-	.tools {
-		margin-top: 1.75rem;
-	}
-
-	.coursework h3,
-	.tools h3 {
-		font-size: 0.95rem;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		color: #6b7280;
-		margin-bottom: 0.65rem;
-		font-weight: 600;
-	}
-
-	.coursework p,
-	.tools p {
-		font-size: 1rem;
-		line-height: 1.7;
-		color: #4b5563;
-	}
 </style>

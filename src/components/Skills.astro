@@ -3,15 +3,19 @@
 const technicalGroups = [
 	{
 		title: "Languages",
-		skills: ["C++", "C", "Python", "RISC-V", "Verilog"]
+		skills: ["Python (Proficient)", "C++ (Proficient)", "C", "RISC-V", "Verilog"]
 	},
 	{
-		title: "Tools",
-		skills: ["GitHub", "GitHub Copilot", "Git/Unix/Linux Shell", "Pandas", "NumPy", "scikit-learn", "matplotlib"]
+		title: "Developer Tools",
+		skills: ["Unix/Linux/Git CLI", "GitHub", "GitHub Copilot", "Claude Code", "Pandas", "NumPy", "scikit-learn", "matplotlib"]
+	},
+	{
+		title: "Observability & Data",
+		skills: ["Grafana", "Prometheus", "PQL", "KQL", "Monitoring Dashboards", "Production Observability"]
 	}
 ];
 
-const coursework = ["Data Structures", "Artificial Intelligence", "Discrete Structures", "Computer Logic & Design", "Program Design", "Programming Concepts"];
+const strengths = ["Troubleshooting", "Scripting", "Servers", "Data Querying", "Incident Visibility", "Development"];
 ---
 
 <section id="skills">
@@ -31,9 +35,9 @@ const coursework = ["Data Structures", "Artificial Intelligence", "Discrete Stru
 		</div>
 
 		<div class="skill-category">
-			<h3>Coursework</h3>
+			<h3>Core Strengths</h3>
 			<div class="skill-tags">
-				{coursework.map(skill => (
+				{strengths.map(skill => (
 					<span class="skill-tag">{skill}</span>
 				))}
 			</div>

@@ -3,6 +3,7 @@
   max-width: none;
   width: 100%;
   margin: 0;
+  padding-top: 3rem;
   padding-left: max(1.5rem, calc((100vw - 1080px) / 2));
   padding-right: max(1.5rem, calc((100vw - 1080px) / 2));
 }
