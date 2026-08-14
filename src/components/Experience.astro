@@ -4,7 +4,7 @@ const experiences = [
 		organization: "Morgan Stanley",
 		logo: "/logos/morgan-stanley.png",
 		role: "Tech Summer Analyst — Enterprise Engineering",
-		team: "E*TRADE Platform · Trading Platform Observability & Incident Visibility",
+		team: "E*TRADE Platform · Trading Platform Engineering & Observability",
 		dates: "June 2026 — August 2026"
 	},
 	{
@@ -68,7 +68,7 @@ const activities = experiences.slice(3);
 			<article class="activity-item">
 				<div class="activity-content">
 					{activity.logo && (
-						<img src={activity.logo} alt="" class="org-logo activity-logo" />
+						<img src={activity.logo} alt="" class="org-logo" />
 					)}
 					<div>
 						<p class="organization">{activity.organization}</p>

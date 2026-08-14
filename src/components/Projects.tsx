@@ -14,14 +14,14 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Titanic Machine Learning from Disaster",
-    description: "Predicted Titanic passenger survival. Applied data cleaning, feature engineering, and analysis to the Titanic dataset. Built machine learning models using Python and scikit-learn. Enhanced predictive performance through model selection and hyperparameter tuning.",
-    technologies: ["Python", "Pandas", "scikit-learn", "NumPy", "Matplotlib", "Seaborn", "Machine Learning", "Data Analysis"],
+    description: "Engineered an ensemble learning model for Titanic survivorship with Python, scikit-learn, and seaborn; conducted data cleaning, feature engineering, & cross validation; achieved 77% prediction accuracy.",
+    technologies: ["Python", "Pandas", "scikit-learn", "NumPy", "Matplotlib", "Seaborn", "Machine Learning"],
     githubUrl: "https://github.com/SammysHyper/titanic_machine_learning",
   },
   {
     id: 2,
     title: "Orbit - Discord Bot",
-    description: "Developed an autonomous Discord chatbot in Python that centralized shared prompts and responses in one collaborative channel, reducing group decision-making time.",
+    description: "Centralized shared prompts, reducing group decision making time. Integrated Discord’s Developer and OpenAI’s GPT Mini API for commands & response generation for 80+ users.",
     technologies: ["Python", "Discord API", "OpenAI API"],
     githubUrl: "https://github.com/SammysHyper/sam_discord_bot",
     liveUrl: "",

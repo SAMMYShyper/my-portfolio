@@ -4,12 +4,18 @@
 
 <section id="about">
 	<div class="about-content">
-		<h1>Samuel Gonzalez</h1>
-		<p class="identity">B.S. Computer Science · Georgia Tech</p>
-		<p class="intro">
-			I enjoy competitive, high-pressure problem-solving, whether that means building software or competitive PC gaming.
-			I center my work around professionalism, collaboration, and enterprise satisfaction.
-		</p>
+		<div class="about-text">
+			<h1>Samuel Gonzalez</h1>
+			<p class="identity">B.S. Computer Science · Georgia Tech · Class of May 2028</p>
+			<p class="intro">
+				Whether I'm building software or playing videogames,
+			I center my work around competitiveness, professionalism, and collaboration.
+			</p>
+		</div>
+		<!-- <div class="about-photo">
+			<img src="/photos/me.jpeg" alt="Samuel Gonzalez" />
+		</div>
+		-->
 	</div>
 </section>
 
@@ -21,7 +27,15 @@
 	}
 
 	.about-content {
-		max-width: 780px;
+		align-items: center;
+		display: flex;
+		gap: clamp(2rem, 5vw, 4rem);
+		justify-content: space-between;
+		max-width: 1080px;
+	}
+
+	.about-text {
+		max-width: 620px;
 	}
 
 	#about h1 {
@@ -45,4 +59,33 @@
 		margin-bottom: 0;
 	}
 
+	.about-photo {
+		flex: 0 0 auto;
+	}
+
+	.about-photo img {
+		border-radius: 16px;
+		border: 1px solid var(--border);
+		display: block;
+		height: 280px;
+		object-fit: cover;
+		width: 450px;
+	}
+
+	@media (max-width: 720px) {
+		.about-content {
+			flex-direction: column-reverse;
+			gap: 2rem;
+		}
+
+		.about-text {
+			max-width: none;
+			text-align: center;
+		}
+
+		.about-photo img {
+			height: 160px;
+			width: 160px;
+		}
+	}
 </style>
