@@ -2,30 +2,35 @@
 const experiences = [
 	{
 		organization: "Morgan Stanley",
+		logo: "/logos/morgan-stanley.png",
 		role: "Tech Summer Analyst — Enterprise Engineering",
 		team: "E*TRADE Platform · Trading Platform Observability & Incident Visibility",
 		dates: "June 2026 — August 2026"
 	},
 	{
 		organization: "GitHub",
+		logo: "/logos/github.png",
 		role: "Support Delivery Intern — Enterprise Support Engineering",
 		team: "Support Delivery in Enterprise Support Engineering & Management",
 		dates: "May 2025 — August 2025"
 	},
 	{
 		organization: "Universal Aqua Technologies",
+		logo: "/logos/uat.png",
 		role: "Systems Engineering Intern",
 		team: "Industrial Closed-Circuit Reverse Osmosis Engineering",
 		dates: "May 2024 — August 2024"
 	},
 	{
 		organization: "PlayVS College League",
+		logo: "/logos/playvs.png",
 		/*role: "Esports Player",*/
 		role: "Competitive Fortnite Esports Player · PCL Championship Series",
 		dates: "January 2026 — May 2026"
 	},
 	{
 		organization: "Society of Hispanic Professional Engineers",
+		logo: "/logos/shpe.png",
 		role: "Director of Professional Development",
 		dates: "August 2025 — December 2025"
 	}
@@ -43,14 +48,15 @@ const activities = experiences.slice(3);
 	<div class="experience-list">
 		{careerExperiences.map((experience) => (
 			<article class="experience-item">
-				<div class="experience-meta">
-					<p class="dates">{experience.dates}</p>
-				</div>
+				{experience.logo && (
+					<img src={experience.logo} alt="" class="org-logo" />
+				)}
 				<div class="experience-details">
 					<h3>{experience.role}</h3>
 					<p class="organization">{experience.organization}</p>
 					{experience.team && <p class="team">{experience.team}</p>}
 				</div>
+				<p class="dates">{experience.dates}</p>
 			</article>
 		))}
 	</div>
@@ -60,10 +66,15 @@ const activities = experiences.slice(3);
 		<div class="activities-grid">
 		{activities.map((activity) => (
 			<article class="activity-item">
-				<div>
-					<p class="organization">{activity.organization}</p>
-					<p class="activity-role">{activity.role}</p>
-					{activity.team && <p class="team">{activity.team}</p>}
+				<div class="activity-content">
+					{activity.logo && (
+						<img src={activity.logo} alt="" class="org-logo activity-logo" />
+					)}
+					<div>
+						<p class="organization">{activity.organization}</p>
+						<p class="activity-role">{activity.role}</p>
+						{activity.team && <p class="team">{activity.team}</p>}
+					</div>
 				</div>
 				<p class="dates">{activity.dates}</p>
 			</article>
@@ -101,9 +112,10 @@ const activities = experiences.slice(3);
 	}
 
 	.experience-item {
+		align-items: center;
 		display: grid;
-		grid-template-columns: minmax(160px, 0.45fr) minmax(0, 1fr);
-		gap: 2rem;
+		grid-template-columns: auto minmax(0, 1fr) auto;
+		gap: 1.5rem;
 		padding: 1.65rem 0;
 		border-bottom: 1px solid var(--border);
 	}
@@ -114,6 +126,11 @@ const activities = experiences.slice(3);
 		font-weight: 600;
 	}
 
+	.experience-item .dates {
+		text-align: right;
+		white-space: nowrap;
+	}
+
 	.experience-details h3 {
 		color: var(--ink);
 		font-size: 1.15rem;
@@ -122,8 +139,18 @@ const activities = experiences.slice(3);
 	}
 
 	.organization {
-		color: #b9d6c5;
-		font-weight: 650;
+		color: #d7ecdf;
+		font-size: 1.02rem;
+		font-weight: 750;
+		letter-spacing: 0.01em;
+	}
+
+	.org-logo {
+		border-radius: 8px;
+		flex: 0 0 auto;
+		height: 100px;
+		object-fit: contain;
+		width: 100px;
 	}
 
 	.team {
@@ -158,6 +185,18 @@ const activities = experiences.slice(3);
 		border-bottom: 1px solid var(--border);
 	}
 
+	.activity-content {
+		align-items: center;
+		display: flex;
+		gap: 1rem;
+		min-width: 0;
+	}
+
+	.activity-logo {
+		height: 120px;
+		width: 120px;
+	}
+
 	.activity-role {
 		color: var(--text);
 		font-size: 0.9rem;
@@ -183,6 +222,16 @@ const activities = experiences.slice(3);
 		.experience-item {
 			grid-template-columns: 1fr;
 			gap: 0.35rem;
+		}
+
+		.experience-item .org-logo {
+			height: 40px;
+			margin-bottom: 0.25rem;
+			width: 40px;
+		}
+
+		.experience-item .dates {
+			text-align: left;
 		}
 
 		.activity-item {
