@@ -12,10 +12,14 @@
 			I center my work around competitiveness, professionalism, and collaboration.
 			</p>
 		</div>
-		<!-- <div class="about-photo">
-			<img src="/photos/me.jpeg" alt="Samuel Gonzalez" />
+		<div class="about-photos">
+			<div class="photo-vertical">
+				<img src="/logos/rock_climb.jpeg" alt="name" />
+			</div>
+		<div class="photo-wide">
+			<img src="/logos/pc_build.jpeg" alt="name" />
 		</div>
-		-->
+	</div>
 	</div>
 </section>
 
@@ -59,17 +63,36 @@
 		margin-bottom: 0;
 	}
 
-	.about-photo {
+	.about-photos {
+		align-items: center;
+		display: flex;
 		flex: 0 0 auto;
+		gap: 1rem;
 	}
 
-	.about-photo img {
+	.about-photos img {
 		border-radius: 16px;
 		border: 1px solid var(--border);
 		display: block;
-		height: 280px;
 		object-fit: cover;
-		width: 450px;
+		width: 100%;
+	}
+
+	.photo-vertical {
+		width: 220px;
+	}
+
+	.photo-vertical img {
+		aspect-ratio: 3 / 4;
+	}
+
+	.photo-wide {
+		width: 220px;
+	}
+
+	.photo-wide img {
+		aspect-ratio: 3/4;
+		object-position: center;
 	}
 
 	@media (max-width: 720px) {
@@ -83,9 +106,13 @@
 			text-align: center;
 		}
 
-		.about-photo img {
-			height: 160px;
-			width: 160px;
+		.about-photos {
+	flex-direction: column;
 		}
-	}
+
+		.photo-vertical,
+		.photo-wide {
+			width: 200px;
+		}
+	}		
 </style>
