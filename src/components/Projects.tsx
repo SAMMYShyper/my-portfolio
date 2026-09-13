@@ -24,7 +24,6 @@ const projectsData: Project[] = [
     description: "Centralized shared prompts, reducing group decision making time. Integrated Discord’s Developer and OpenAI’s GPT Mini API for commands & response generation for 80+ users.",
     technologies: ["Python", "Discord API", "OpenAI API"],
     githubUrl: "https://github.com/SammysHyper/sam_discord_bot",
-    liveUrl: "",
   },
   {
     id: 3,
@@ -32,6 +31,15 @@ const projectsData: Project[] = [
     description: "Designed and built a 3D-printed autonomous robot frog capable of following objects using ultrasonic sensors, with all control logic programmed in C++ for Arduino components.",
     technologies: ["C++", "Arduino", "Ultrasonic Sensors", "3D Printing"],
     liveUrl: "https://youtu.be/OMRBRlsXD_Q?si=KGbRw5iiSUkhO-XG",
+  },
+    
+  {
+    id: 4,
+    title: "Django Movie Store [CS2340 Class Project]",
+    description: "Developed Movie Store, a web application that allows users to browse from a selection of movies, add them to cart, and purchase them. Other features: reviews, admin store management, and sign-up/login.",
+    technologies: ["Python", "Django (5.0)", "HTML", "CSS", "Bootstrap", "SQLite"],
+    githubUrl: "https://github.com/SAMMYShyper/moviesstores",
+    liveUrl: "https://youtu.be/oQV14NAYSbA",
   },
 ];
 
