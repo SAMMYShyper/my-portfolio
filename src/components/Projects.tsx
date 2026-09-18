@@ -8,6 +8,7 @@ interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  websiteUrl?: string;
 }
 
 const projectsData: Project[] = [
@@ -35,11 +36,19 @@ const projectsData: Project[] = [
     
   {
     id: 4,
-    title: "Django Movie Store [CS2340 Class Project]",
-    description: "Developed Movie Store, a web application that allows users to browse from a selection of movies, add them to cart, and purchase them. Other features: reviews, admin store management, and sign-up/login.",
-    technologies: ["Python", "Django (5.0)", "HTML", "CSS", "Bootstrap", "SQLite"],
+    title: "Movie Store",
+    description: "Developed Movie Store, a web application that allows users to browse from a selection of movies, add them to cart, and purchase them. Features include: reviews, admin store management, and sign-up/login.",
+    technologies: ["PythonAnywhere", "Django (5.0)", "HTML", "CSS", "Bootstrap", "SQLite"],
     githubUrl: "https://github.com/SAMMYShyper/moviesstores",
     liveUrl: "https://youtu.be/oQV14NAYSbA",
+    websiteUrl: "https://sammyhi.pythonanywhere.com/",
+  },
+  {
+    id: 5,
+    title: "Amigos House Buyer",
+    description: "Developed Amigos HouseBuyer, a simple web app created for a real estate client. Features include: contact form, property listings, and mobile friendly design.",
+    technologies: ["HTML", "CSS", "Astro", "JavaScript", "Vercel"],
+    websiteUrl: "https://amigoshousebuyer.com/",
   },
 ];
 
@@ -97,6 +106,11 @@ export default function Projects() {
               {project.liveUrl && (
                 <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                   Live Demo &rarr;
+                </a>
+              )}
+              {project.websiteUrl && (
+                <a href={project.websiteUrl} target="_blank" rel="noopener noreferrer">
+                  Website &rarr;
                 </a>
               )}
             </div>
