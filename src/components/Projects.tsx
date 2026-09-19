@@ -9,6 +9,8 @@ interface Project {
   githubUrl?: string;
   liveUrl?: string;
   websiteUrl?: string;
+  gtDescription?: string;
+  processDescription?: string;
 }
 
 const projectsData: Project[] = [
@@ -42,6 +44,8 @@ const projectsData: Project[] = [
     githubUrl: "https://github.com/SAMMYShyper/moviesstores",
     liveUrl: "https://youtu.be/oQV14NAYSbA",
     websiteUrl: "https://sammyhi.pythonanywhere.com/",
+    gtDescription: "All of the user stories for the required project have been implemented. Here I’ll walk through them and how they are displayed. The website features a navigation menu with an “About” section, where users learn about the app and purpose. On the top right of the navigation menu, users have the option to register (“Sign Up”) or log into their existing accounts with their stored account data. If a user wants to view the list of movies available, they may select the “Movies” option in the navigation bar and once there, they could search for their movie’s title of interest via the search bar. Whether a user is logged-in or not, they could add to cart, accessing their cart in the “Cart” navigation bar option. Additionally, a user can add to their shopping cart, log out, and return to their saved selections if they’d like to purchase in the future. However, before purchasing from the cart, the user must log in or register an account. The cart also allows users to delete the movies placed in their cart if they are not interested anymore. If a user is feeling something towards a movie, they can also leave a review by navigating to the “Movies” option in the navigation bar, select their movie, and add a comment in the open text box. The reviews left by users could be seen by all users and removed by the author, the intention of public reviews is to help the user in their decision of whether or not they’d like to purchase. Additionally, reviews are flexible and could be updated at any time by the author, therefore giving users flexibility to change their mind. Regarding the movie description, each movie (navigating to “Movies”->select movie) comes with a brief description of its plot, giving users details of the movie to help their purchase decision. We also value order history, therefore in the “Orders” navigation bar option, users can look at their past orders containing the movie(s) purchased, price, date, and time, this is intended so the user can track their purchases and expenses.",
+    processDescription: "The methodology for this development project didn't follow a strict regiment, rather a relatively quick timeline of short sprints over the course of 4 days. Each day I would dedicate about 2-4 hours to writing code and documenting my process via video. Each of these sprints, led and reviewed by myself, would include a three-step process: read documentation prior to writing a single line of code (to ensure understanding), write code, and debug. Debugging took the most time, and in retrospect, most debugging was avoidable had I taken more time on understanding code better before writing. By the fourth day I deployed onto Python Anywhere. The project was straightforward and followed ordered procedures and practices outlined by “Django 5 for the Impatient:” by D. Correra & G. Lim. Most of my questions I had while writing code were answered well by the book and I rarely had to research online.  If I had a question that wasn’t answered by the book, then I’d do a browser search on the framework, syntax, or tool I was using.",
   },
   {
     id: 5,
@@ -96,6 +100,23 @@ export default function Projects() {
                 <span key={tech} className="tech-tag">{tech}</span>
               ))}
             </div>
+
+            {(project.gtDescription || project.processDescription) && (
+              <div className="project-details">
+                {project.gtDescription && (
+                  <details className="project-detail">
+                    <summary>GT Movie Store Description</summary>
+                    <p>{project.gtDescription}</p>
+                  </details>
+                )}
+                {project.processDescription && (
+                  <details className="project-detail">
+                    <summary>Process Description</summary>
+                    <p>{project.processDescription}</p>
+                  </details>
+                )}
+              </div>
+            )}
 
             <div className="project-links">
               {project.githubUrl && (
